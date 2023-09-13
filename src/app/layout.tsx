@@ -1,13 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Lato({ weight: "100", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "StartupGPT",
-  description:
-    "Bootstrap your next startup with the power of GPT",
+  description: "Bootstrap your next startup with the power of GPT",
 };
 
 export default function RootLayout({
@@ -17,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <>{children}</>
+      </body>
     </html>
   );
 }
