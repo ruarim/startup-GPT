@@ -4,6 +4,13 @@ import Button from "../ui/button";
 import { signIn } from "next-auth/react";
 
 export default function Login() {
+  const handleLogin = () => {
+    //get user
+        //if user exists
+      signIn("google");
+      //else
+        //create user
+  }
   return (
     <div className="border border-gray-500 rounded-lg px-4 pt-5 pb-4 transition-all sm:my-8 md:w-[600px] w-full sm:max-w-lg sm:p-6">
       <div className="flex min-h-full flex-col justify-center px-10 md:px-16">

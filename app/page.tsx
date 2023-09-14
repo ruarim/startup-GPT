@@ -1,6 +1,6 @@
-import Header from "@/components/header";
-import Button from "@/components/ui/button";
-import Logo from "@/components/ui/logo";
+import Header from "./_components/header";
+import Button from "./_components/ui/button";
+import Logo from "./_components/ui/logo";
 
 export default function Home() {
   return (
