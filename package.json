@@ -18,6 +18,7 @@
     "dotenv": "^16.3.1",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
+    "kysely": "^0.26.3",
     "next": "13.4.19",
     "next-auth": "^4.23.1",
     "postcss": "8.4.29",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "aws-cdk-lib": "2.91.0",
     "constructs": "10.2.69",
+    "kysely-codegen": "^0.10.1",
     "sst": "^2.24.27"
   }
 }
