@@ -6,35 +6,43 @@ export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
 
 export type Timestamp = ColumnType<Date, Date | string, Date | string>;
 
-export interface Files {
+export interface File {
   id: number;
-  projectId: number | null;
-  userId: number | null;
-  name: string | null;
-  bucketName: string | null;
-  path: string | null;
-  type: string | null;
+  promptId: number | null;
+  name: string;
+  bucketName: string;
+  path: string;
+  type: string;
   createdAt: Generated<Timestamp>;
 }
 
-export interface Projects {
+export interface Project {
   id: number;
   userId: number | null;
-  name: string | null;
-  prompt: string | null;
+  name: string;
+  createdAt: Generated<Timestamp>;
+}
+
+export interface Prompt {
+  id: number;
+  projectId: number | null;
+  content: string;
+  investment: number;
+  codeGen: Generated<boolean | null>;
   generated: Generated<boolean | null>;
   createdAt: Generated<Timestamp>;
 }
 
-export interface Users {
+export interface User {
   id: number;
-  email: string | null;
+  email: string;
   tokens: Generated<number | null>;
   createdAt: Generated<Timestamp>;
 }
 
 export interface Database {
-  files: Files;
-  projects: Projects;
-  users: Users;
+  file: File;
+  project: Project;
+  prompt: Prompt;
+  user: User;
 }
