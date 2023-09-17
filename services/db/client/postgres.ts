@@ -4,7 +4,7 @@ import { Kysely } from "kysely";
 import { DataApiDialect } from "kysely-data-api";
 import type { Database } from "./types";
 
-export const DB = new Kysely<Database>({
+export const db = new Kysely<Database>({
   dialect: new DataApiDialect({
     mode: "postgres",
     driver: {

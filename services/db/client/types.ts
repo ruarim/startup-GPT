@@ -7,7 +7,7 @@ export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
 export type Timestamp = ColumnType<Date, Date | string, Date | string>;
 
 export interface File {
-  id: number;
+  id: Generated<number>;
   promptId: number | null;
   name: string;
   bucketName: string;
@@ -17,14 +17,14 @@ export interface File {
 }
 
 export interface Project {
-  id: number;
+  id: Generated<number>;
   userId: number | null;
-  name: string;
+  name: Generated<string | null>;
   createdAt: Generated<Timestamp>;
 }
 
 export interface Prompt {
-  id: number;
+  id: Generated<number>;
   projectId: number | null;
   content: string;
   investment: number;
@@ -34,7 +34,7 @@ export interface Prompt {
 }
 
 export interface User {
-  id: number;
+  id: Generated<number>;
   email: string;
   tokens: Generated<number | null>;
   createdAt: Generated<Timestamp>;
